@@ -2,7 +2,7 @@
 
 make deb file of telegram
 
-current version :- 3.5.2
+current version :- 3.6.0
 
 ## install
 
