@@ -2,7 +2,7 @@
 
 # repo url:- https://github.com/jakbin/deb-scripts
 
-wget 'https://github.com/telegramdesktop/tdesktop/releases/download/v3.5.2/tsetup.3.5.2.tar.xz'
+wget 'https://github.com/telegramdesktop/tdesktop/releases/download/v3.6.0/tsetup.3.6.0.tar.xz'
 tar -xvf tsetup.3.5.2.tar.xz
 mkdir -p telegram/usr/bin
 cp -r Telegram/Telegram telegram/usr/bin
