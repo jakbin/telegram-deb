@@ -2,8 +2,14 @@
 
 # repo url:- https://github.com/jakbin/deb-scripts
 
-wget 'https://github.com/telegramdesktop/tdesktop/releases/download/v3.6.0/tsetup.3.6.0.tar.xz'
-tar -xvf tsetup.3.6.0.tar.xz
+version='3.6.0'
+if [[ -f 'tsetup.'$version'.tar.xz' ]]; then
+	echo "file tsetup.$version.tar.xz already exits"
+else
+	wget 'https://github.com/telegramdesktop/tdesktop/releases/download/v'$version'/tsetup.'$version'.tar.xz'
+fi
+
+tar -xvf tsetup.$version.tar.xz
 mkdir -p telegram/usr/bin
 cp -r Telegram/Telegram telegram/usr/bin
 mv telegram/usr/bin/Telegram telegram/usr/bin/telegram
