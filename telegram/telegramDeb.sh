@@ -2,7 +2,7 @@
 
 # repo url:- https://github.com/jakbin/deb-scripts
 
-version='3.6.0'
+version='3.7.3'
 if [[ -f 'tsetup.'$version'.tar.xz' ]]; then
 	echo "file tsetup.$version.tar.xz already exits"
 else
