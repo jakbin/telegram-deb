@@ -13,7 +13,18 @@ tar -xvf tsetup.$version.tar.xz
 mkdir -p telegram/usr/bin
 cp -r Telegram/Telegram telegram/usr/bin
 mv telegram/usr/bin/Telegram telegram/usr/bin/telegram
-wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/control'
+if [[ -f 'share.zip' ]]; then
+	echo "share.zip file already exits"
+else
+	wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/share.zip'
+fi
+unzip share.zip
+cp -R share telegram/usr/
+if [[ -f 'control' ]]; then
+	echo "control file already exits"
+else
+	wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/control'
+fi
 mkdir telegram/DEBIAN
 cp control telegram/DEBIAN/
 dpkg -b telegram
