@@ -1,5 +1,5 @@
 Package: node
-Version: 16.14.0
+Version: 16.16.0
 Priority: optional
 Section: web
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@alioth-lists.debian.net>
@@ -30,4 +30,3 @@ Description: evented I/O for V8 javascript - runtime executable
  .
  System, Events, Standard I/O, Modules, Timers, Child Processes, POSIX,
  HTTP, Multipart Parsing, TCP, DNS, Assert, Path, URL, Query Strings
- 

@@ -2,10 +2,10 @@
 
 make deb file of telegram
 
-current version :- 3.6.0
+current version :- 4.0.2
 
 ## install
 
 ```sh
-wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/telegramDeb.sh' | sh
+curl 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/telegramDeb.sh' | sh
 ```
