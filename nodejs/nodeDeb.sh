@@ -2,7 +2,7 @@
 
 # repo url:- https://github.com/jakbin/deb-scripts
 
-version='v16.16.0'
+version='v18.13.0'
 
 if [ -f 'node-'$version'-linux-x64.tar.xz' ]; then
 	echo "file node-$version-linux-x64.tar.xz already exits"
@@ -23,6 +23,6 @@ else
 	wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/nodejs/control'
 fi
 
-mkdir node-v16/DEBIAN
-cp control node-v16/DEBIAN/
-dpkg -b node-v16
+mkdir node-$version/DEBIAN
+cp control node-$version/DEBIAN/
+dpkg -b node-$version

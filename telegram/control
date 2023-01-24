@@ -1,5 +1,5 @@
 Package: telegram-desktop
-Version: 4.3.1
+Version: 4.5.3
 Built-Using: libtgowt (= 0~git20220202.d618d0b+dfsg-2), ms-gsl (= 4.0.0-2), range-v3 (= 0.11.0-2), tl-expected (= 1.0.0~dfsg-2)
 Priority: optional
 Section: net
