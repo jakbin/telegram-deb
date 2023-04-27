@@ -3,7 +3,7 @@
 # repo url:- https://github.com/jakbin/deb-scripts
 
 
-version='v18.15.0'
+version='v18.16.0'
 
 if [ -f 'node-'$version'-linux-x64.tar.xz' ]; then
 	echo "file node-$version-linux-x64.tar.xz already exits"
