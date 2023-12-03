@@ -1,5 +1,5 @@
 Package: node
-Version: 18.17.1
+Version: 20.10.0
 Priority: optional
 Section: web
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@alioth-lists.debian.net>
