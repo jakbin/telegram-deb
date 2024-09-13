@@ -7,5 +7,5 @@ Collections of bash scripts making deb files
 
 ## Available scripts 
 
-1. nodejs : v20.10.0
+1. nodejs : v20.17.0
 2. telegram : v4.6.5
