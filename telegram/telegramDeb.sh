@@ -2,7 +2,7 @@
 
 # repo url:- https://github.com/jakbin/deb-scripts
 
-version='4.6.5'
+version='5.5.5'
 
 if [ -f 'tsetup.'$version'.tar.xz' ]; then
 	echo "file tsetup.$version.tar.xz already exits"
@@ -33,6 +33,3 @@ fi
 mkdir telegram-$version/DEBIAN
 cp control telegram-$version/DEBIAN/
 dpkg -b telegram-$version
-rm -rf telegram-$version
-rm -rf Telegram
-rm -rf share
