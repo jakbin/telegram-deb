@@ -1,0 +1,20 @@
+Package: telegram-desktop
+Version: 5.6.3
+Built-Using: libtgowt (= 0~git20220202.d618d0b+dfsg-2), ms-gsl (= 4.0.0-2), range-v3 (= 0.11.0-2), tl-expected (= 1.0.0~dfsg-2)
+Priority: optional
+Section: net
+Maintainer: Dhruv Jagdish
+Architecture: amd64
+Installed-Size: 76.9 MB
+Recommends: fonts-open-sans
+Homepage: https://desktop.telegram.org
+Tag: implemented-in::c++, interface::graphical, interface::x11,
+ network::client, role::program, uitoolkit::gtk, uitoolkit::qt,
+ x11::application
+Download-Size: 26.2 MB
+APT-Sources: https://kali.download/kali kali-rolling/main amd64 Packages
+Description: fast and secure messaging application
+ Telegram is a messaging app with a focus on speed and security, it is
+ super-fast, simple and free. You can use Telegram on all your devices at the
+ same time — your messages sync seamlessly across any number of your phones,
+ tablets or computers.
