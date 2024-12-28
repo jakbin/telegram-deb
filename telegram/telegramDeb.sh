@@ -18,7 +18,7 @@ mv telegram-$version/usr/bin/Telegram telegram-$version/usr/bin/telegram
 if [ -f 'share.zip' ]; then
 	echo "share.zip file already exits"
 else
-	wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/share.zip'
+	wget 'https://raw.githubusercontent.com/jakbin/telegram-deb/main/telegram/share.zip'
 fi
 
 unzip share.zip
@@ -27,7 +27,7 @@ cp -R share telegram-$version/usr/
 if [ -f 'control' ]; then
 	echo "control file already exits"
 else
-	wget 'https://raw.githubusercontent.com/jakbin/deb-scripts/main/telegram/control'
+	wget 'https://raw.githubusercontent.com/jakbin/telegram-deb/main/telegram/control'
 fi
 
 mkdir telegram-$version/DEBIAN
