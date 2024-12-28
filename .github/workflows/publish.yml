@@ -6,7 +6,7 @@ on:
       - telegram/telegramDeb.sh
 
 jobs:
-  build-nodejs-deb:
+  build-telegram-deb:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
