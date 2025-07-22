@@ -1,6 +1,6 @@
 # Telegram Deb
 
-Telegram : v5.10.7
+Telegram : v5.16.4
 
 Deb file for telegram official build.
 
