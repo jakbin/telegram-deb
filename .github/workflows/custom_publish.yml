@@ -19,8 +19,8 @@ jobs:
 
     - name: Update Telegram version in telegramDeb.sh
       run: |
-        sed -i "s/^version='v.*'/version='v${{ github.event.inputs.telegram_version }}'/' telegram/telegramDeb.sh
-        sed -i "s/^Version: .*/Version: ${{ github.event.inputs.telegram_version }}/" telegram/control
+        sed -i "s|^version=.*|version='v${{ github.event.inputs.telegram_version }}'|" telegram/telegramDeb.sh
+        sed -i "s|^Version: .*|Version: ${{ github.event.inputs.telegram_version }}|" telegram/control
 
     - name: Build Deb File
       run: |

@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# repo url:- https://github.com/jakbin/deb-scripts
-
-
+version='v5.13.1'
 
 if [ -f 'tsetup.'$version'.tar.xz' ]; then
 	echo "file tsetup.$version.tar.xz already exits"
