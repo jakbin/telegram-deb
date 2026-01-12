@@ -1,0 +1,41 @@
+name: Release Telegram custom version build
+
+on:
+  workflow_dispatch:
+    inputs:
+      telegram_version:
+        description: 'Telegram version to build'
+        required: true
+
+jobs:
+  build-nodejs-deb:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: sudo apt update && sudo apt-get install build-essential dpkg
+
+    - name: Update Telegram version in telegramDeb.sh
+      run: |
+        sed -i "s/^version='v.*'/version='v${{ github.event.inputs.telegram_version }}'/' telegram/telegramDeb.sh
+        sed -i "s/^Version: .*/Version: ${{ github.event.inputs.telegram_version }}/" telegram/control
+
+    - name: Build Deb File
+      run: |
+        bash telegram/telegramDeb.sh
+
+    - name: Extract Telegram Version
+      id: extract_version
+      run: echo "TELEGRAM_VERSION=$(grep -oP "version='\K[^']+" telegram/telegramDeb.sh)" >> $GITHUB_ENV
+
+    - name: Automatic Release
+      uses: marvinpinto/action-automatic-releases@latest
+      with: 
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ env.TELEGRAM_VERSION }}"
+        prerelease: false
+        title: "Telegram ${{ env.TELEGRAM_VERSION }} Current Build"
+        files: |
+          *.deb
